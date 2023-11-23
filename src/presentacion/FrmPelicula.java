@@ -394,7 +394,7 @@ public class FrmPelicula extends javax.swing.JFrame {
             short duracionPelicula = 0;
             titulo = txtTitulo.getText().trim();
             try {
-                duracionPelicula = Short.parseShort(txtDuracion.getText());                
+                duracionPelicula = Short.parseShort(txtDuracion.getText().trim( ));                
             }catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null,
                     "Error, la duración debe ser numeros enteros.",
@@ -451,7 +451,7 @@ public class FrmPelicula extends javax.swing.JFrame {
         btnNuevo.setEnabled(true);
         btnAgregar.setEnabled(true);
         habilitarTexto(true);
-        lblMensaje.setText(""+fila);
+        lblMensaje.setText("");
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
